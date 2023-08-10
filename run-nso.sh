@@ -16,8 +16,6 @@ conf="-c ${confdir}/ncs.conf"
 
 test -x $ncs || exit 1
 
-for x in /var/opt/ncs/packages/*; do make -C $x/src; done;
-
 setup_ncs_environment () {
     . ${ncsdir}/ncsrc
     NCS_CONFIG_DIR=${confdir}
@@ -25,6 +23,8 @@ setup_ncs_environment () {
     NCS_LOG_DIR=${logdir}
     export NCS_CONFIG_DIR NCS_RUN_DIR NCS_LOG_DIR
 }
+
+for x in /var/opt/ncs/packages/services/*; do make -C $x/src; done;
 
 nso_pid=0
 

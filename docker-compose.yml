@@ -1,0 +1,20 @@
+---
+version: '3.8'
+
+services:
+  nso:
+    container_name: nso
+    build:
+      context: .
+      args:
+        NSO_VERSION: "6.1"
+    volumes:
+    - "./packages:/var/opt/ncs/packages"
+    ports:
+    - 8080:8080
+    - 8888:8888
+    - 830:830 
+    - 2022:2022
+    - 2023:2023
+    - 2024:2024
+    - 4569:4569

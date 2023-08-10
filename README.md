@@ -25,6 +25,7 @@ INSTALLATION
  
  * run docker build i.e: ``docker image build --build-arg NSO_VERSION=4.7.4.3 -t nsotest:latest .`` (With NSO_VERSION the version of your binary)
  
+* default username/password: admin/cisco123
    
 TROUBLESHOOTING
 ---------------
@@ -39,7 +40,7 @@ FAQ
 KNOWN ISSUES
 ---------------
 
-/
+* This is not compatible with NSO 4.X anymore
 
 MAINTAINERS
 -----------

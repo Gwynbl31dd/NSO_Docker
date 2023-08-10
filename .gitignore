@@ -1,3 +1,5 @@
 # Executables
 *.bin
+# Packages
+packages/*
 
